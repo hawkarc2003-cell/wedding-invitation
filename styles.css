@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #c4a96f;
+    --accent-color: #f5f5f5;
+    --text-color: #333;
+    --light-text: #666;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2d2d2d 100%);
+    color: white;
+    padding: 60px 40px;
+    text-align: center;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.header-content {
+    animation: fadeIn 1s ease-in;
+}
+
+.islamic-ornament {
+    font-size: 24px;
+    color: var(--secondary-color);
+    margin: 20px 0;
+    letter-spacing: 8px;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin: 20px 0;
+    text-transform: capitalize;
+}
+
+.subtitle {
+    font-size: 16px;
+    font-style: italic;
+    color: var(--secondary-color);
+    font-weight: 300;
+}
+
+/* Couple Section */
+.couple {
+    padding: 60px 40px;
+    background: linear-gradient(to bottom, white, #fafafa);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.couple-names {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.person {
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+}
+
+.person h2 {
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.relation {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.divider {
+    font-size: 28px;
+    color: var(--secondary-color);
+    font-weight: 300;
+}
+
+/* Events Section */
+.events {
+    padding: 60px 40px;
+    background: white;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 15px;
+}
+
+.event {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 4px;
+}
+
+.event-name {
+    font-size: 22px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.event-details p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.label {
+    font-weight: 600;
+    color: var(--secondary-color);
+    display: inline-block;
+    min-width: 80px;
+}
+
+.value {
+    color: var(--light-text);
+}
+
+/* RSVP Section */
+.rsvp {
+    padding: 60px 40px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2d2d2d 100%);
+    color: white;
+    text-align: center;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.rsvp .section-title {
+    color: white;
+    border-bottom-color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+.rsvp-text {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.rsvp-contact {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.rsvp-contact p {
+    font-size: 16px;
+}
+
+.contact-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.contact-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Message Section */
+.message {
+    padding: 50px 40px;
+    background: white;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.islamic-message {
+    font-size: 16px;
+    font-style: italic;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.reference {
+    font-size: 14px;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2d2d2d 100%);
+    color: white;
+    padding: 40px 40px;
+    text-align: center;
+    border-top: 3px solid var(--secondary-color);
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .title {
+        font-size: 36px;
+    }
+
+    .couple-names {
+        gap: 20px;
+    }
+
+    .person h2 {
+        font-size: 24px;
+    }
+
+    .event {
+        padding: 20px;
+    }
+
+    .rsvp-contact {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .header, .events, .rsvp, .message, .footer {
+        padding: 40px 20px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+    }
+
+    .container {
+        box-shadow: none;
+        max-width: 100%;
+    }
+}
