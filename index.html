@@ -3,90 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Invitation</title>
+    <title>Wedding Invitation | Mis. & Mr. Syed Omer Ali</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
+        <!-- Floating particles background -->
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+
         <!-- Music Player -->
         <div class="music-player">
             <button id="musicToggle" class="music-btn" title="Toggle Music">
                 <span class="music-icon">🎵</span>
             </button>
             <audio id="backgroundMusic" loop>
+                <!-- TODO: Replace with your Reelaudio.mp3 file -->
+                <!-- Upload Reelaudio.mp3 to the repo root and uncomment the line below -->
+                <!-- <source src="Reelaudio.mp3" type="audio/mpeg"> -->
                 <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
-        <!-- Header -->
+        <!-- Header Welcome Section -->
         <header class="header">
             <div class="header-content">
-                <div class="islamic-ornament top animate-ornament">✦</div>
-                <h1 class="title animate-title">We are getting married</h1>
-                <p class="subtitle animate-subtitle">In the name of Allah, the Most Gracious, the Most Merciful</p>
-                <p class="bismillah-text animate-subtitle">Bismillah, Naath Tera Naam Se Shuru Hova<br>Tere Naam Se Kahtam</p>
-                <div class="islamic-ornament animate-ornament">✦</div>
+                <div class="islamic-ornament top animate-ornament">✦ ✦ ✦</div>
+                <div class="islamic-symbol animate-slide-down">☪</div>
+                <p class="bismillah animate-fade-in">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+                <p class="subtitle animate-slide-up">In the Name of Allah, the Most Gracious, the Most Merciful</p>
+                <h1 class="welcome-title animate-title">With Pleasure & Joy</h1>
+                <p class="welcome-subtitle animate-fade-in" style="animation-delay: 0.3s;">We invite you to celebrate the marriage of</p>
+                <div class="floral-ornament animate-bounce">🌹 🌿 🌹</div>
             </div>
         </header>
 
-        <!-- Bride & Groom -->
+        <!-- Guardianship Section -->
+        <section class="guardianship animate-fade-up">
+            <p class="guardianship-text animate-slide-up">Under the Guardianship of</p>
+            <h3 class="guardian-name animate-slide-up" style="animation-delay: 0.1s;">Mrs. Late Syed Mahmood Ali Bahab (R.A)</h3>
+            <h3 class="guardian-name animate-slide-up" style="animation-delay: 0.2s;">& Mrs. & Mr. Syed Dawood Ali Sahab (Nana, Nani)</h3>
+        </section>
+
+        <!-- Main Couple Names -->
         <section class="couple animate-fade-up">
-            <div class="couple-names">
-                <div class="person animate-slide-left">
-                    <h2>Daughter of Syed Omer Ali</h2>
-                    <p class="relation">Bride</p>
+            <div class="couple-container">
+                <div class="floral-line animate-expand-left"></div>
+                <div class="couple-content">
+                    <h2 class="couple-title animate-scale">Mis. & Mr. Syed Omer Ali</h2>
+                    <p class="couple-subtitle animate-fade-in" style="animation-delay: 0.2s;">request the honor of your presence at the marriage of their beloved daughter</p>
                 </div>
-                <div class="divider">&</div>
-                <div class="person animate-slide-right">
-                    <h2>Syed Amair</h2>
-                    <p class="relation">Groom</p>
+                <div class="floral-line animate-expand-right"></div>
+            </div>
+        </section>
+
+        <!-- Bride Details -->
+        <section class="bride-details animate-fade-up">
+            <div class="bride-container">
+                <div class="bride-side animate-slide-left">
+                    <div class="floral-decoration">🌹</div>
+                    <h2 class="bride-name">Daughter</h2>
+                </div>
+                <div class="divider-vertical animate-grow"></div>
+                <div class="groom-side animate-slide-right">
+                    <p class="bride-label">with</p>
+                    <h2 class="groom-name">Syed Amir</h2>
+                    <p class="groom-father">S/o Mr. Late Syed Khaja Pasha Sahab</p>
+                    <div class="floral-decoration">🌹</div>
                 </div>
             </div>
         </section>
 
-        <!-- Events -->
-        <section class="events animate-fade-up">
-            <h2 class="section-title">Celebration Events</h2>
-            
-            <div class="event animate-scale">
-                <h3 class="event-name">Walima Dinner</h3>
-                <div class="event-details">
-                    <p><span class="label">Date:</span> <span class="value">17 September</span></p>
-                    <p><span class="label">Venue:</span> <span class="value">SG Function Hall</span></p>
-                </div>
-            </div>
+        <!-- Event Header -->
+        <section class="event-header animate-fade-up">
+            <p class="event-label-top animate-slide-down">Solicit your gracious presence at the auspicious occasion</p>
+            <h3 class="event-title-main animate-scale">Marriage Ceremony</h3>
+        </section>
 
-            <div class="event animate-scale" style="animation-delay: 0.2s;">
-                <h3 class="event-name">Ceremony</h3>
-                <div class="event-details">
-                    <p><span class="label">Date:</span> <span class="value">17 September</span></p>
-                    <p><span class="label">Venue:</span> <span class="value">SG Function Hall</span></p>
+        <!-- Date and Time -->
+        <section class="date-section animate-fade-up">
+            <p class="date-intro animate-fade-in">IN SHA ALLAH</p>
+            <div class="date-container animate-scale-up">
+                <div class="date-item">
+                    <p class="date-day-label">On Thursday</p>
+                    <h3 class="date-day">17</h3>
+                    <p class="date-month">September 2026</p>
+                    <p class="date-hijri">(5th Rabi-us-Sani 1448 Hijri)</p>
                 </div>
             </div>
         </section>
 
-        <!-- RSVP -->
+        <!-- Venue Details -->
+        <section class="venue-section animate-fade-up">
+            <div class="venue-container">
+                <div class="venue-item animate-slide-left">
+                    <div class="venue-icon">🕌</div>
+                    <h4 class="venue-title">Nikah (Marriage Ceremony)</h4>
+                    <p class="venue-time">After Namaz-e-Asar</p>
+                    <p class="venue-location">Gulab Shah Masjid</p>
+                    <p class="venue-address">Madan Khan Colony,</p>
+                    <p class="venue-address">Bibi Ka Chashma, Hyderabad</p>
+                </div>
+
+                <div class="venue-divider animate-grow-vertical"></div>
+
+                <div class="venue-item animate-slide-right">
+                    <div class="venue-icon">🍽️</div>
+                    <h4 class="venue-title">Reception Dinner</h4>
+                    <p class="venue-time">9:00 PM Onwards</p>
+                    <p class="venue-location">S.G. Function Hall</p>
+                    <p class="venue-address">Opp. Peeli Dargah,</p>
+                    <p class="venue-address">Mumtaz Bagh, Barkas, Hyderabad</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dress Code -->
+        <section class="dress-code animate-fade-up">
+            <h3 class="section-title animate-fade-in">Dress Code</h3>
+            <p class="dress-text animate-fade-in" style="animation-delay: 0.1s;">Traditional Attire</p>
+        </section>
+
+        <!-- RSVP Section -->
         <section class="rsvp animate-fade-up">
-            <h2 class="section-title">We would be honored by your presence</h2>
-            <p class="rsvp-text">Kindly RSVP</p>
-            <div class="rsvp-contact">
-                <p><a href="tel:+918919694408" class="contact-link">📞 +91 8919694408</a></p>
+            <h2 class="rsvp-title animate-fade-in">We would be honored by your gracious presence</h2>
+            <p class="rsvp-subtitle animate-fade-in" style="animation-delay: 0.1s;">Kindly RSVP</p>
+            <div class="rsvp-contact-container animate-scale">
+                <a href="tel:+918919694408" class="contact-card animate-hover">
+                    <span class="contact-icon">📞</span>
+                    <span class="contact-text">+91 8919694408</span>
+                </a>
             </div>
         </section>
 
         <!-- Islamic Message -->
         <section class="message animate-fade-up">
-            <p class="islamic-message">"And of His signs is that He created for you from yourselves mates that you may dwell in tranquility with them; and He placed between you affection and mercy."</p>
-            <p class="reference">- Quran 30:21</p>
+            <div class="message-content">
+                <div class="floral-ornament-message animate-bounce">🌹</div>
+                <p class="islamic-message animate-fade-in">"And of His signs is that He created for you from yourselves mates that you may dwell in tranquility with them; and He placed between you affection and mercy..."</p>
+                <p class="reference animate-fade-in" style="animation-delay: 0.1s;">- Quran 30:21</p>
+                <div class="floral-ornament-message animate-bounce" style="animation-delay: 0.2s;">🌹</div>
+            </div>
         </section>
 
         <!-- Footer -->
         <footer class="footer animate-fade-up">
-            <div class="islamic-ornament animate-ornament">✦</div>
-            <p>May Allah bless this union and grant us a life filled with love, mercy, and compassion</p>
-            <div class="islamic-ornament animate-ornament">✦</div>
+            <div class="islamic-ornament animate-ornament">✦ ✦ ✦</div>
+            <p class="footer-text animate-fade-in">May Allah bless this union with eternal love, mercy, and compassion</p>
+            <p class="footer-blessing animate-fade-in" style="animation-delay: 0.1s;">Ameen</p>
+            <div class="islamic-ornament animate-ornament" style="animation-delay: 0.2s;">✦ ✦ ✦</div>
         </footer>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator animate-bounce-slow">
+            <span>↓</span>
+        </div>
     </div>
 
     <script src="script.js"></script>
