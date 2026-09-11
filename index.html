@@ -8,25 +8,37 @@
 </head>
 <body>
     <div class="container">
+        <!-- Music Player -->
+        <div class="music-player">
+            <button id="musicToggle" class="music-btn" title="Toggle Music">
+                <span class="music-icon">🎵</span>
+            </button>
+            <audio id="backgroundMusic" loop>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
         <!-- Header -->
         <header class="header">
             <div class="header-content">
-                <div class="islamic-ornament top">✦</div>
-                <h1 class="title">We are getting married</h1>
-                <p class="subtitle">In the name of Allah, the Most Gracious, the Most Merciful</p>
-                <div class="islamic-ornament">✦</div>
+                <div class="islamic-ornament top animate-ornament">✦</div>
+                <h1 class="title animate-title">We are getting married</h1>
+                <p class="subtitle animate-subtitle">In the name of Allah, the Most Gracious, the Most Merciful</p>
+                <p class="bismillah-text animate-subtitle">Bismillah, Naath Tera Naam Se Shuru Hova<br>Tere Naam Se Kahtam</p>
+                <div class="islamic-ornament animate-ornament">✦</div>
             </div>
         </header>
 
         <!-- Bride & Groom -->
-        <section class="couple">
+        <section class="couple animate-fade-up">
             <div class="couple-names">
-                <div class="person">
+                <div class="person animate-slide-left">
                     <h2>Daughter of Syed Omer Ali</h2>
                     <p class="relation">Bride</p>
                 </div>
                 <div class="divider">&</div>
-                <div class="person">
+                <div class="person animate-slide-right">
                     <h2>Syed Amair</h2>
                     <p class="relation">Groom</p>
                 </div>
@@ -34,10 +46,10 @@
         </section>
 
         <!-- Events -->
-        <section class="events">
+        <section class="events animate-fade-up">
             <h2 class="section-title">Celebration Events</h2>
             
-            <div class="event">
+            <div class="event animate-scale">
                 <h3 class="event-name">Walima Dinner</h3>
                 <div class="event-details">
                     <p><span class="label">Date:</span> <span class="value">17 September</span></p>
@@ -45,7 +57,7 @@
                 </div>
             </div>
 
-            <div class="event">
+            <div class="event animate-scale" style="animation-delay: 0.2s;">
                 <h3 class="event-name">Ceremony</h3>
                 <div class="event-details">
                     <p><span class="label">Date:</span> <span class="value">17 September</span></p>
@@ -55,7 +67,7 @@
         </section>
 
         <!-- RSVP -->
-        <section class="rsvp">
+        <section class="rsvp animate-fade-up">
             <h2 class="section-title">We would be honored by your presence</h2>
             <p class="rsvp-text">Kindly RSVP</p>
             <div class="rsvp-contact">
@@ -64,17 +76,19 @@
         </section>
 
         <!-- Islamic Message -->
-        <section class="message">
+        <section class="message animate-fade-up">
             <p class="islamic-message">"And of His signs is that He created for you from yourselves mates that you may dwell in tranquility with them; and He placed between you affection and mercy."</p>
             <p class="reference">- Quran 30:21</p>
         </section>
 
         <!-- Footer -->
-        <footer class="footer">
-            <div class="islamic-ornament">✦</div>
+        <footer class="footer animate-fade-up">
+            <div class="islamic-ornament animate-ornament">✦</div>
             <p>May Allah bless this union and grant us a life filled with love, mercy, and compassion</p>
-            <div class="islamic-ornament">✦</div>
+            <div class="islamic-ornament animate-ornament">✦</div>
         </footer>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
