@@ -5,11 +5,12 @@
 }
 
 :root {
-    --primary-color: #1a1a1a;
-    --secondary-color: #c4a96f;
+    --primary-color: #8B4513;
+    --secondary-color: #D4AF7C;
     --accent-color: #f5f5f5;
-    --text-color: #333;
+    --text-color: #2D1810;
     --light-text: #666;
+    --rose-color: #8B5A5A;
 }
 
 body {
@@ -20,11 +21,12 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     background: white;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    border: 2px solid var(--secondary-color);
 }
 
 /* Music Player */
@@ -39,20 +41,20 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #d4b896 100%);
-    border: none;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #c9935f 100%);
+    border: 3px solid var(--primary-color);
     cursor: pointer;
     font-size: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(196, 169, 111, 0.4);
+    box-shadow: 0 4px 15px rgba(212, 175, 124, 0.4);
     transition: all 0.3s ease;
 }
 
 .music-btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(196, 169, 111, 0.6);
+    box-shadow: 0 6px 20px rgba(212, 175, 124, 0.6);
 }
 
 .music-btn.playing .music-icon {
@@ -66,79 +68,146 @@ body {
 
 /* Header */
 .header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #2d2d2d 100%);
-    color: white;
+    background: linear-gradient(135deg, #FFF8DC 0%, #F5DEB3 100%);
+    color: var(--primary-color);
     padding: 60px 40px;
     text-align: center;
     border-bottom: 3px solid var(--secondary-color);
+    position: relative;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(212, 175, 124, 0.05) 2px, rgba(212, 175, 124, 0.05) 4px);
+    pointer-events: none;
 }
 
 .header-content {
-    animation: fadeIn 1s ease-in;
+    position: relative;
+    z-index: 1;
 }
 
-.islamic-ornament {
-    font-size: 24px;
-    color: var(--secondary-color);
-    margin: 20px 0;
-    letter-spacing: 8px;
-}
-
-.animate-ornament {
-    animation: floatOrnament 3s ease-in-out infinite;
-}
-
-.title {
+.islamic-symbol {
     font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.bismillah {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin: 15px 0;
     font-weight: 300;
     letter-spacing: 2px;
-    margin: 20px 0;
-    text-transform: capitalize;
-}
-
-.animate-title {
-    animation: slideDownTitle 0.8s ease-out;
 }
 
 .subtitle {
     font-size: 16px;
-    font-style: italic;
-    color: var(--secondary-color);
+    color: var(--rose-color);
     font-weight: 300;
+    margin: 10px 0;
 }
 
-.animate-subtitle {
-    animation: fadeInUp 1s ease-out 0.3s both;
+.islamic-ornament {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin: 20px 0;
+    letter-spacing: 8px;
 }
 
-.bismillah-text {
-    font-size: 16px;
-    color: var(--secondary-color);
-    font-style: italic;
+.floral-ornament {
+    font-size: 20px;
     margin: 15px 0;
-    line-height: 1.6;
-    animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.floral-ornament-message {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+/* Animation Classes */
+.animate-ornament {
+    animation: floatOrnament 3s ease-in-out infinite;
+}
+
+.animate-slide-down {
+    animation: slideDown 0.8s ease-out;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.8s ease-out 0.2s both;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out 0.1s both;
+}
+
+/* Guardianship Section */
+.guardianship {
+    padding: 40px 40px;
+    background: linear-gradient(to bottom, #FFF8DC, white);
+    text-align: center;
+    border-bottom: 2px dotted var(--secondary-color);
+}
+
+.guardianship-text {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.guardian-name {
+    font-size: 16px;
+    color: var(--primary-color);
+    margin: 5px 0;
+    font-weight: 400;
+    letter-spacing: 0.5px;
 }
 
 /* Couple Section */
 .couple {
-    padding: 60px 40px;
-    background: linear-gradient(to bottom, white, #fafafa);
-    border-bottom: 1px solid #e0e0e0;
+    padding: 50px 40px;
+    background: linear-gradient(to bottom, white, #FAFAF8);
+    border-bottom: 2px solid var(--secondary-color);
 }
 
 .couple-names {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
-.person {
+.person-floral {
+    font-size: 32px;
+}
+
+.floral-decoration {
+    display: inline-block;
+}
+
+.main-couple {
     text-align: center;
-    flex: 1;
-    min-width: 150px;
+}
+
+.couple-title {
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.animate-scale {
+    animation: scaleIn 0.8s ease-out;
 }
 
 .animate-slide-left {
@@ -149,101 +218,173 @@ body {
     animation: slideInRight 0.8s ease-out;
 }
 
-.person h2 {
-    font-size: 32px;
-    font-weight: 400;
-    color: var(--primary-color);
-    margin-bottom: 8px;
-    letter-spacing: 1px;
-}
-
-.relation {
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: var(--secondary-color);
-    font-weight: 500;
-}
-
-.divider {
-    font-size: 28px;
-    color: var(--secondary-color);
-    font-weight: 300;
-}
-
-/* Events Section */
-.events {
-    padding: 60px 40px;
-    background: white;
-}
-
-.section-title {
+/* Bride Details Section */
+.bride-details {
+    padding: 50px 40px;
+    background: linear-gradient(to bottom, #FAFAF8, white);
     text-align: center;
-    font-size: 28px;
-    font-weight: 300;
-    color: var(--primary-color);
-    margin-bottom: 40px;
-    letter-spacing: 1px;
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 15px;
-    animation: fadeIn 0.8s ease-out;
+    border-bottom: 2px dotted var(--secondary-color);
 }
 
-.event {
-    margin-bottom: 40px;
+.bride-label {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.event-title {
+    font-size: 28px;
+    color: var(--primary-color);
+    margin: 15px 0;
+    font-weight: 400;
+    letter-spacing: 2px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 15px 30px;
+    display: inline-block;
+}
+
+.bride-description {
+    font-size: 16px;
+    color: var(--text-color);
+    margin: 15px 0;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.bride-name {
+    font-size: 40px;
+    color: var(--primary-color);
+    font-weight: 400;
+    margin: 20px 0;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+.groom-name {
+    font-size: 40px;
+    color: var(--primary-color);
+    font-weight: 400;
+    margin: 20px 0;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+.groom-father {
+    font-size: 14px;
+    color: var(--text-color);
+    margin: 15px 0;
+}
+
+/* Ceremony Details */
+.ceremony-details {
+    padding: 50px 40px;
+    background: linear-gradient(135deg, #FAFAF8 0%, #F5F5F3 100%);
+    text-align: center;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.date-label {
+    font-size: 14px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.date-box {
+    background: white;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
     padding: 30px;
-    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
-    border-left: 4px solid var(--secondary-color);
+    margin: 0 auto;
+    max-width: 300px;
+    box-shadow: 0 4px 15px rgba(212, 175, 124, 0.1);
+}
+
+.day-text {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.day-number {
+    font-size: 72px;
+    color: var(--primary-color);
+    font-weight: 300;
+    margin: 10px 0;
+    letter-spacing: 2px;
+}
+
+.month-text {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin: 10px 0;
+    font-weight: 400;
+}
+
+.hijri-text {
+    font-size: 12px;
+    color: var(--rose-color);
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Location Section */
+.location-section {
+    padding: 50px 40px;
+    background: linear-gradient(to bottom, white, #FAFAF8);
+    border-bottom: 2px dotted var(--secondary-color);
+}
+
+.location-box {
+    margin-bottom: 30px;
+    padding: 25px;
+    background: linear-gradient(135deg, #FFF8DC 0%, #F5DEB3 100%);
+    border-left: 4px solid var(--primary-color);
     border-radius: 4px;
 }
 
-.animate-scale {
-    animation: scaleIn 0.6s ease-out;
+.location-box:last-child {
+    margin-bottom: 0;
 }
 
-.event-name {
-    font-size: 22px;
+.location-label {
+    font-size: 14px;
     color: var(--primary-color);
-    margin-bottom: 20px;
-    font-weight: 400;
-}
-
-.event-details p {
-    font-size: 15px;
-    margin-bottom: 10px;
-    color: var(--text-color);
-}
-
-.label {
     font-weight: 600;
-    color: var(--secondary-color);
-    display: inline-block;
-    min-width: 80px;
+    margin-bottom: 10px;
 }
 
-.value {
-    color: var(--light-text);
+.location-text {
+    font-size: 15px;
+    color: var(--text-color);
+    margin: 5px 0;
 }
 
 /* RSVP Section */
 .rsvp {
     padding: 60px 40px;
-    background: linear-gradient(135deg, var(--primary-color) 0%, #2d2d2d 100%);
-    color: white;
+    background: linear-gradient(135deg, #FAFAF8 0%, #F5F5F3 100%);
     text-align: center;
-    border-bottom: 3px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
 }
 
-.rsvp .section-title {
-    color: white;
-    border-bottom-color: var(--secondary-color);
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--primary-color);
     margin-bottom: 30px;
+    letter-spacing: 1px;
 }
 
 .rsvp-text {
     font-size: 18px;
     margin-bottom: 30px;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-weight: 500;
 }
 
@@ -259,44 +400,45 @@ body {
 }
 
 .contact-link {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     text-decoration: none;
     transition: all 0.3s ease;
     font-weight: 500;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
 }
 
 .contact-link:hover {
-    opacity: 0.8;
-    text-decoration: underline;
+    opacity: 0.7;
 }
 
 /* Message Section */
 .message {
     padding: 50px 40px;
-    background: white;
+    background: linear-gradient(to bottom, #FAFAF8, white);
     text-align: center;
-    border-top: 1px solid #e0e0e0;
+    border-top: 2px dotted var(--secondary-color);
 }
 
 .islamic-message {
     font-size: 16px;
     font-style: italic;
     color: var(--text-color);
-    margin-bottom: 15px;
+    margin: 15px 0;
     line-height: 1.8;
     font-weight: 300;
 }
 
 .reference {
     font-size: 14px;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-weight: 600;
 }
 
 /* Footer */
 .footer {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #2d2d2d 100%);
-    color: white;
+    background: linear-gradient(135deg, #FFF8DC 0%, #F5DEB3 100%);
+    color: var(--primary-color);
     padding: 40px 40px;
     text-align: center;
     border-top: 3px solid var(--secondary-color);
@@ -305,10 +447,10 @@ body {
 .footer p {
     font-size: 14px;
     line-height: 1.8;
-    color: #ccc;
+    color: var(--text-color);
 }
 
-/* Animations */
+/* Keyframe Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -318,29 +460,7 @@ body {
     }
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes animate-fade-up {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideDownTitle {
+@keyframes slideDown {
     from {
         opacity: 0;
         transform: translateY(-40px);
@@ -351,10 +471,32 @@ body {
     }
 }
 
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes slideInLeft {
     from {
         opacity: 0;
-        transform: translateX(-50px);
+        transform: translateX(-60px);
     }
     to {
         opacity: 1;
@@ -365,7 +507,7 @@ body {
 @keyframes slideInRight {
     from {
         opacity: 0;
-        transform: translateX(50px);
+        transform: translateX(60px);
     }
     to {
         opacity: 1;
@@ -378,18 +520,41 @@ body {
         transform: translateY(0px);
     }
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-12px);
     }
 }
 
 @keyframes scaleIn {
     from {
         opacity: 0;
-        transform: scale(0.95);
+        transform: scale(0.9);
     }
     to {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+/* Elegant Disappearing/Sliding Animation */
+@keyframes slideOutLeft {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100px);
     }
 }
 
@@ -416,35 +581,58 @@ body {
     animation-delay: 0.8s;
 }
 
+.animate-fade-up:nth-child(6) {
+    animation-delay: 1s;
+}
+
 /* Responsive Design */
-@media (max-width: 600px) {
-    .title {
-        font-size: 36px;
+@media (max-width: 768px) {
+    .container {
+        border: 1px solid var(--secondary-color);
+    }
+
+    .header {
+        padding: 40px 25px;
+    }
+
+    .couple-title {
+        font-size: 28px;
+    }
+
+    .bride-name,
+    .groom-name {
+        font-size: 32px;
+    }
+
+    .event-title {
+        font-size: 22px;
+        padding: 12px 25px;
+    }
+
+    .day-number {
+        font-size: 56px;
     }
 
     .couple-names {
         gap: 20px;
     }
 
-    .person h2 {
-        font-size: 24px;
-    }
-
-    .event {
+    .location-box {
         padding: 20px;
     }
 
-    .rsvp-contact {
-        gap: 20px;
-        flex-direction: column;
-    }
-
-    .header, .events, .rsvp, .message, .footer {
-        padding: 40px 20px;
+    .guardianship,
+    .bride-details,
+    .ceremony-details,
+    .location-section,
+    .rsvp,
+    .message,
+    .footer {
+        padding: 40px 25px;
     }
 
     .section-title {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .music-btn {
@@ -453,8 +641,66 @@ body {
         font-size: 24px;
     }
 
-    .bismillah-text {
+    .islamic-symbol {
+        font-size: 36px;
+    }
+
+    .guardian-name {
         font-size: 14px;
+    }
+
+    .rsvp-contact {
+        gap: 20px;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .couple-title {
+        font-size: 22px;
+    }
+
+    .bride-name,
+    .groom-name {
+        font-size: 26px;
+    }
+
+    .day-number {
+        font-size: 48px;
+    }
+
+    .event-title {
+        font-size: 18px;
+    }
+
+    .header {
+        padding: 30px 15px;
+    }
+
+    .guardianship,
+    .bride-details,
+    .ceremony-details,
+    .location-section,
+    .rsvp,
+    .message,
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .floral-ornament {
+        font-size: 16px;
+    }
+
+    .islamic-ornament {
+        font-size: 18px;
+    }
+
+    .location-box {
+        padding: 15px;
+    }
+
+    .date-box {
+        padding: 20px;
     }
 }
 
